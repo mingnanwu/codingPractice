@@ -8,6 +8,8 @@ public class Main {
         mergeSortTest();
         combinationTest();
         permutationTest();
+        BinarySearchTest();
+        subsetsTest();
 	// write your code here
     }
 
@@ -20,6 +22,16 @@ public class Main {
         {
             System.out.println(result[i]);
         }
+    }
+
+
+    private static void BinarySearchTest(){
+        System.out.println("BinarySearch");
+        binarySearch bClass = new binarySearch();
+        int[] arr = new int[]{06,16,19,20,25,26,28,31,35};
+        int result = bClass.BinarySearchTest(arr);
+
+            System.out.println(result);
     }
 
     private static void combinationTest()
@@ -50,6 +62,14 @@ public class Main {
             }
             System.out.println();
         }
+    }
+
+
+    private static void subsetsTest(){
+        System.out.println("subset");
+        subsets sClass = new subsets();
+        sClass.subsetTest("ABCD",0);
+
     }
 
 
