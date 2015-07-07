@@ -10,7 +10,35 @@ public class Main {
         permutationTest();
         BinarySearchTest();
         subsetsTest();
+        moveNonzero(new int[]{0,0,0,0,1,0,2,0,0,3,0,6,0,9,0,0,0,6,7,5,0,5,0});
 	// write your code here
+    }
+
+
+    private static int moveNonzero(int[] arr)
+    {
+        int firstZero = 0;
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] == 0) {
+                firstZero = i;
+                break;
+            }
+        }
+        int counter = 0;
+
+        for(int i = firstZero+1; i < arr.length; i++)
+        {
+            if(arr[i] != 0)
+            {
+                arr[firstZero] = arr[i];
+                arr[i] = 0;
+                firstZero++;
+                counter++;
+            }
+        }
+        System.out.println("move non zero in array");
+        System.out.println(counter);
+        return counter;
     }
 
     private static void mergeSortTest(){
