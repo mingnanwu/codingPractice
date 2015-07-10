@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -10,35 +11,16 @@ public class Main {
         permutationTest();
         BinarySearchTest();
         subsetsTest();
-        moveNonzero(new int[]{0,0,0,0,1,0,2,0,0,3,0,6,0,9,0,0,0,6,7,5,0,5,0});
+        moveNonzero();
+        mergeSortedList();
 	// write your code here
     }
 
 
-    private static int moveNonzero(int[] arr)
+    private static void moveNonzero()
     {
-        int firstZero = 0;
-        for(int i = 0; i < arr.length; i++) {
-            if(arr[i] == 0) {
-                firstZero = i;
-                break;
-            }
-        }
-        int counter = 0;
-
-        for(int i = firstZero+1; i < arr.length; i++)
-        {
-            if(arr[i] != 0)
-            {
-                arr[firstZero] = arr[i];
-                arr[i] = 0;
-                firstZero++;
-                counter++;
-            }
-        }
-        System.out.println("move non zero in array");
-        System.out.println(counter);
-        return counter;
+        moveZero mClass = new moveZero();
+        mClass.moveZeroTest(new int[]{0,0,0,0,1,0,2,0,0,3,0,6,0,9,0,0,0,6,7,5,0,5,0});
     }
 
     private static void mergeSortTest(){
@@ -98,6 +80,20 @@ public class Main {
         subsets sClass = new subsets();
         sClass.subsetTest("ABCD",0);
 
+    }
+
+    private static void mergeSortedList() {
+        System.out.println("MergeSorted List");
+        mergeSortedList mClass = new mergeSortedList();
+        List<Integer> l1 =new ArrayList<Integer>();
+        List<Integer> l2 =new ArrayList<Integer>();
+        l1.add(1);
+        l1.add(5);
+        l2.add(2);
+        l2.add(3);
+        l2.add(6);
+
+        mClass.mergeSortedListTest(l1,l2);
     }
 
 
