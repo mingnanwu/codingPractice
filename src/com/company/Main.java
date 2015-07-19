@@ -13,7 +13,33 @@ public class Main {
         subsetsTest();
         moveNonzero();
         mergeSortedList();
+        heapSort();
+        quickSort();
 	// write your code here
+    }
+
+    private static void quickSort()
+    {
+        System.out.println("quickSort");
+        quickSort qClass = new quickSort();
+        int[] arr = new int[]{06,16,20,26,31,16,19,25,28,35};
+        int[] result = qClass.QuikcSortTest(arr);
+        for(int i = 0; i < result.length ; i++)
+        {
+            System.out.println(result[i]);
+        }
+    }
+
+    private static void heapSort()
+    {
+        System.out.println("heapSort");
+        heapSort hClass = new heapSort();
+        int[] arr = new int[]{06,16,20,26,31,16,19,25,28,35};
+        int[] result = hClass.HeapSortTest(arr);
+        for(int i = 0; i < result.length ; i++)
+        {
+            System.out.println(result[i]);
+        }
     }
 
 
