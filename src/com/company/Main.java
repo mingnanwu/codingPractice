@@ -6,16 +6,33 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        mergeSortTest();
-        combinationTest();
-        permutationTest();
-        BinarySearchTest();
-        subsetsTest();
-        moveNonzero();
-        mergeSortedList();
-        heapSort();
-        quickSort();
+//        mergeSortTest();
+//        combinationTest();
+//        permutationTest();
+//        BinarySearchTest();
+//        subsetsTest();
+//        moveNonzero();
+//        mergeSortedList();
+//        heapSort();
+//        quickSort();
+          compareStrings();
+
 	// write your code here
+    }
+
+    private static void compareStrings()
+    {
+//        Compare two strings A and B, determine whether A contains all of the characters in B.
+//            The characters in string A and B are all Upper Case letters.
+//            Example
+//        For A = "ABCD", B = "ABC", return true.
+//            For A = "ABCD" B = "AABC", return false.
+
+        System.out.println("compare strings");
+        compareStrings cClass = new compareStrings();
+        System.out.println(" A = \"ABCD\", B = \"ABC\" "+cClass.compareStringsTest("ABCD","ABC"));
+        System.out.println(" A = \"ABCD\" B = \"AABC\" " +cClass.compareStringsTest("ABCD", "AABC"));
+
     }
 
     private static void quickSort()
