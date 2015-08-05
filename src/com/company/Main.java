@@ -15,9 +15,96 @@ public class Main {
 //        mergeSortedList();
 //        heapSort();
 //        quickSort();
-          compareStrings();
+//          compareStrings();
+//          strStr();
+//          longestCommonSubstring();
+//          RotateString();
+//        ReverseWordsinaString();
+//        RemoveElement();
+//        ZeroSumSubarray();
+//        SubarraySumClosest();
+        ProductOfArrayExcludeItself();
 
 	// write your code here
+    }
+
+    private static void ProductOfArrayExcludeItself()
+    {
+        System.out.println("Product of Array Exclude Itself");
+        productOfArrayExcludeItself pClass = new productOfArrayExcludeItself();
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        for(int i =0; i< 21;i++) {
+            arr.add(2);
+        }
+        System.out.println("For A = [1, 2, 3], return [6, 3, 2]." + pClass.productExcludeItself(arr));
+
+
+    }
+
+    private static void SubarraySumClosest()
+    {
+        System.out.println("Subarray Sum Closest");
+
+        subarraySumClosest sClass = new subarraySumClosest();
+        int[] arr = {-3, 1, 1, -3, 5};
+        System.out.println("Given [-3, 1, 1, -3, 5], return [0, 2], [1, 3], [1, 1], [2, 2] or [0, 4] "+sClass.subarraySumClosest(arr));
+
+
+    }
+
+    private static void ZeroSumSubarray()
+    {
+        System.out.println("Zero Sum Subarray");
+        zeroSumSubarray gClass = new zeroSumSubarray();
+        int[] arr = {-3, 1, 2, -3, 4};
+        System.out.println("Given [-3, 1, 2, -3, 4], return [0, 2] or [1, 3]." + gClass.ZeroSumSubarray(arr));
+    }
+
+    private static void RemoveElement()
+    {
+        System.out.println("Remove Element");
+        removeElement rClass = new removeElement();
+        int [] arr ={0,4,4,0,0,2,4,4};
+        System.out.println("Given an array [0,4,4,0,0,2,4,4], value=4\n" +
+                "\n" +
+                "return 4 and front four elements of the array is [0,0,0,2]" + rClass.removeElemet(arr,4));
+    }
+
+    private static void ReverseWordsinaString()
+    {
+        System.out.println("Reverse Words in a String");
+        reverseWordsInString rClass = new reverseWordsInString();
+        System.out.println("Given s = \"the sky is blue\",\n" +
+                "return \"blue is sky the\"." + rClass.ReverseWordInString("the sky is blue"));
+
+    }
+
+    private static void RotateString()
+    {
+        System.out.println("Rotate String");
+        rotateString rClass= new rotateString();
+        System.out.println("for offset=3, return \"efgabcd\"" + rClass.rotateString(3, "abcdefg"));
+        System.out.println("for offset=1, return \"gabcdef\"" + rClass.rotateString(1, "abcdefg"));
+
+    }
+
+    private static void longestCommonSubstring()
+    {
+        System.out.println("Longest common substring");
+        longestCommonSubstring lClass= new longestCommonSubstring();
+        System.out.println("Given A=\"ABCD\", B=\"CBCE\", return 2    " +lClass.longestCommonSubstring("ABCD","CBCE"));
+        System.out.println("Given A=\"abccccccccccde\", B=\"dbcccccabccde\", return 6    " +lClass.longestCommonSubstring("abccccccccccde","dbcccccabccde"));
+
+    }
+
+    private static void strStr()
+    {
+        System.out.println("strStr");
+        strStr sClass = new strStr();
+        System.out.println("source=\"source\" and target=\"target\", "+sClass.strStrTest("source", "target"));
+        System.out.println("source=\"abcdabcdefg\" and target=\"bcd\","+sClass.strStrTest("abcdabcdefg", "bcd"));
+
+
     }
 
     private static void compareStrings()
