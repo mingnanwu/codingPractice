@@ -15,17 +15,85 @@ public class Main {
 //        mergeSortedList();
 //        heapSort();
 //        quickSort();
-//          compareStrings();
-//          strStr();
-//          longestCommonSubstring();
-//          RotateString();
+//        compareStrings();
+//        strStr();
+//        longestCommonSubstring();
+//        RotateString();
 //        ReverseWordsinaString();
 //        RemoveElement();
 //        ZeroSumSubarray();
 //        SubarraySumClosest();
-        ProductOfArrayExcludeItself();
+//        ProductOfArrayExcludeItself();
+//        PartitionArray();
+//        FirstMissingPositive();
+//        TwoSum();
+//        ThreeSum();
+        RemoveDuplicatesFromSortedArray();
+        RemoveDuplicatesFromSortedArray2();
 
 	// write your code here
+    }
+
+
+    private static void RemoveDuplicatesFromSortedArray2()
+    {
+        System.out.println("Remove Duplicates From Sorted Array 2");
+        removeDuplicatesFromSortedArray2 rclass = new removeDuplicatesFromSortedArray2();
+        int[] arr = {-14,-14,-14,-14,-14,-14,-14,-13,-13,-13,-13,-12,-11,-11,-11,-9,-9,-9,-7,-7,-7,-6,-6,-5,-5,-5,-4,-4,-4,-3,-3,-3,-2,-2,-2,-1,-1,0,0,0,0,1,1,1,2,2,2,2,3,3,3,3,3,4,4,4,5,5,6,6,6,7,7,7,7,8,8,8,8,9,9,10,10,11,11,11,11,11,12,12,12,12,13,13,13,13,14,14,15,16,17,18,18,18,20,20,21,21,21,21,21,22,22,22,22,23,24,24,25};
+        System.out.println("Given sorted array A = [1,1,1,2,2,3],\n" +
+                "\n" +
+                "Your function should return length = 5, and A is now [1,1,2,2,3].\n  " + rclass.removeDuplicates(arr));
+    }
+
+    private static void RemoveDuplicatesFromSortedArray()
+    {
+        System.out.println("Remove Duplicates From Sorted Array");
+        removeDuplicatefromSortedArray rclass = new removeDuplicatefromSortedArray();
+        int[] arr = {1,1,2};
+        System.out.println("Given input array A = [1,1,2],\n" +
+                "\n" +
+                "Your function should return length = 2, and A is now [1,2].\n" + rclass.removeDuplicates(arr));
+
+    }
+
+    private static void ThreeSum()
+    {
+        System.out.println("3 Sum");
+        threeSum tClass = new threeSum();
+        int[] arr = {1,0,-1,-1,-1,-1,0,1,1,1};
+
+
+
+        System.out.println("S = {-1 0 1 2 -1 -4}, " + tClass.threeSum(arr));
+    }
+
+
+    private static void TwoSum()
+    {
+        System.out.println("2 Sum");
+        twoSum tClass = new twoSum();
+        int[] arr ={2,7,11,15};
+        int[] result = tClass.twoSum(arr, 9);
+        System.out.println("numbers=[2, 7, 11, 15], target=9" + result);
+    }
+
+    private static void FirstMissingPositive()
+    {
+        System.out.println("First Missing Positive");
+        firstMissingPositive fClass = new firstMissingPositive();
+        int[] arr = {1,2,0};
+        int[] arr1= {3,4,-1,1};
+        System.out.println("Given [1,2,0] return 3" + fClass.firstMissingPositive(arr));
+        System.out.println(", and [3,4,-1,1] return 2." + fClass.firstMissingPositive(arr1));
+
+    }
+    private static void PartitionArray()
+    {
+        System.out.println("Partition Array");
+        partitionArray pClass = new partitionArray();
+        int[] arr = {3,2,2,1};
+        System.out.println("f nums = [3,2,2,1] and k=2, a valid answer is 1. " + pClass.partitionArray(arr,2));
+
     }
 
     private static void ProductOfArrayExcludeItself()
