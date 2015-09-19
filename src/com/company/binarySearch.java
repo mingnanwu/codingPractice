@@ -6,7 +6,7 @@ package com.company;
 public class binarySearch {
     public int BinarySearchTest(int[] arr)
     {
-        return healper(arr, 0, arr.length-1, 25);
+        return healper(arr, 0, arr.length-1, 8);
 
     }
 
@@ -14,15 +14,15 @@ public class binarySearch {
     {
 
         int mid = (e - s) /2 + s;
-        if(arr[mid]>target) {
-            healper(arr, s, mid, target);
-        }else if(arr[mid]<target){
-            healper(arr, mid+1, e,target);
+
+        if(arr[mid]<target){
+            return healper(arr, mid+1, e,target);
+        }else if(arr[mid]>target) {
+            return healper(arr, s, mid, target);
         }
         else
         {
             return mid;
         }
-        return 1000000;
     }
 }

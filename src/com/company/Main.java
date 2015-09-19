@@ -28,10 +28,52 @@ public class Main {
 //        FirstMissingPositive();
 //        TwoSum();
 //        ThreeSum();
-        RemoveDuplicatesFromSortedArray();
-        RemoveDuplicatesFromSortedArray2();
+//        RemoveDuplicatesFromSortedArray();
+//        RemoveDuplicatesFromSortedArray2();
+
+        SearchForaRange();
+        FindPeakElement();
+        SearchInRotatedSortedArray();
 
 	// write your code here
+    }
+
+    private static void SearchInRotatedSortedArray()
+    {
+        System.out.println("Search in Rotated Sorted Array");
+        searchInRotatedSortedArray sClass = new searchInRotatedSortedArray();
+        int[] arr = {4, 5, 1, 2, 3};
+
+        System.out.println("For [4, 5, 1, 2, 3] and target=1, return 2." + sClass.search(arr,1));
+
+
+    }
+
+    private static void FindPeakElement()
+    {
+        System.out.println("find peak element");
+        findPeak fClass = new findPeak();
+        int[] arr = {1, 2, 1, 3, 4, 5, 7, 6};
+
+        System.out.println("Given [1, 2, 1, 3, 4, 5, 7, 6]\n" +
+                "\n" +
+                "Return index 1 (which is number 2) or 6 (which is number 7)\n" + fClass.findPeak(arr));
+
+    }
+
+    private static void SearchForaRange()
+    {
+         System.out.println("Search for a range");
+        searchRange sClass = new searchRange();
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        arr.add(5);
+        arr.add(7);
+        arr.add(7);
+        arr.add(8);
+        arr.add(8);
+        arr.add(10);
+        System.out.println("" + sClass.searchRange(arr, 8));
+
     }
 
 
@@ -236,7 +278,7 @@ public class Main {
     private static void BinarySearchTest(){
         System.out.println("BinarySearch");
         binarySearch bClass = new binarySearch();
-        int[] arr = new int[]{06,16,19,20,25,26,28,31,35};
+        int[] arr = new int[]{3,4,5,8,8,8,8,10,13,14};
         int result = bClass.BinarySearchTest(arr);
 
             System.out.println(result);
