@@ -31,11 +31,31 @@ public class Main {
 //        RemoveDuplicatesFromSortedArray();
 //        RemoveDuplicatesFromSortedArray2();
 
-        SearchForaRange();
-        FindPeakElement();
-        SearchInRotatedSortedArray();
+//        SearchForaRange();
+//        FindPeakElement();
+//        SearchInRotatedSortedArray();
+
+        ReorderList();
 
 	// write your code here
+    }
+
+    private static void ReorderList()
+    {
+        System.out.println("ReorderList");
+        reorderList sClass = new reorderList();
+        ListNode head = new ListNode(0);
+        ListNode cur = head;
+        cur.next = new ListNode(3);
+        cur = cur.next;
+        cur.next = new ListNode(1);
+        cur = cur.next;
+        cur.next = new ListNode(-1);
+
+        System.out.println("0->3->1->-1->null, return" );
+        sClass.reorderList(head);
+
+
     }
 
     private static void SearchInRotatedSortedArray()
@@ -183,7 +203,7 @@ public class Main {
     private static void ReverseWordsinaString()
     {
         System.out.println("Reverse Words in a String");
-        reverseWordsInString rClass = new reverseWordsInString();
+        ReverseWordsInString rClass = new ReverseWordsInString();
         System.out.println("Given s = \"the sky is blue\",\n" +
                 "return \"blue is sky the\"." + rClass.ReverseWordInString("the sky is blue"));
 

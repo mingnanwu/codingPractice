@@ -3,7 +3,7 @@ package com.company;
 /**
  * Created by v-kevwu on 8/3/2015.
  */
-public class reverseWordsInString {
+public class ReverseWordsInString {
 
     /*
     Example
